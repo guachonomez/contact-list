@@ -117,7 +117,7 @@ public class AgendaVisual {
 		
 		InsertarDatos agenda = new InsertarDatos();
 		
-		// Acción al clicar en el botón de Añadir
+		// Click on the button Add
 
 		btnAnadir.addActionListener(new ActionListener() {
 			@Override
