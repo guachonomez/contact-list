@@ -35,7 +35,8 @@ public class InsertarDatos {
 		
 		// Counting if the contact already exists
 		
-		String sqlQuery = "SELECT COUNT(Telefono) FROM NameOfTable where Telefono = '" + p + "';"; // Change 'NameOfTable' for the name of your table
+		// Change 'NameOfTable' for the name of your table and ColumnOfPhone for the name of your Column with phones in SQL
+		String sqlQuery = "SELECT COUNT(Telefono) FROM NameOfTable where ColumnOfPhone = '" + p + "';";
 		ResultSet result = sentencia.executeQuery(sqlQuery);
 		
 		int count  = 1;
@@ -89,7 +90,10 @@ public class InsertarDatos {
     		connect.close();
         }else {
         	setContador(1);
-    		sqlQuery = "SELECT * FROM Agenda where Nombre LIKE '%" + n + "%';";
+		
+		 // Change 'NameOfTable' for the name of your table and NameOfColumn for the name of your column in SQL
+		
+    		sqlQuery = "SELECT * FROM NameOfTable where NameOfColumn LIKE '%" + n + "%';";
     		result = sentencia.executeQuery(sqlQuery);
     	    
     	    List<String> resultados = new ArrayList<>();
